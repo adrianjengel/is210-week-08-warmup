@@ -4,7 +4,7 @@
 
 
 def fibonacci(maxint):
-    """Building a Fibonacci sequence generator function with the while loop.
+    """Building a Fibonacci sequence generator function.
 
     Args:
         int: This will serve as the upper bound of the loop.
@@ -19,9 +19,10 @@ def fibonacci(maxint):
     [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 
     """
-    val1, val2 = 0, 1
-    newlist = [val1, ]
+
+    newlist = []
+    val1, val2 = 1, 0
     while val2 < maxint:
-        val1, val2 = val1, val1+val2
-        newlist.append(val1)
+        newlist.append(val2)
+        val1, val2 = val2, val1+val2
     return newlist
